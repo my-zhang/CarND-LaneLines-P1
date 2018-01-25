@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 
 ### 1. Pipleline
 
-My image processing pipeline is consist of 5 steps. 
+My image processing pipeline is consist of 7 steps. 
 
 **(1) Get gray scale image** 
 **(2) Apply Canny algorithm to get edges** 
@@ -50,6 +50,10 @@ Merge strategy is that if 2 lines are "similar", remove one of them from line se
 Extend both lines to upper and lower area bound.
 
 
+**(7) Extend lines** 
+
+Draw extended lines to image.
+
 Finally will get this.
 
 
@@ -60,10 +64,10 @@ Finally will get this.
 
 One shortcoming is that since final line is extended from one shorter line segment, the error could be amplified when after extended.
 
-Another thing is that the vertices of central ploygon are fixed points, the coordinates should depend on image's dimension.
-
 
 ### 3. Suggest possible improvements to your pipeline
 
 One thing could be done is that when drawing current lines, it can be averaged with last lines to get a smoothier result.
+
+Another thing is that the vertices of central ploygon are fixed points, the coordinates should depend on image's dimension.
 
